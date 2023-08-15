@@ -1,32 +1,39 @@
-// using 64 bit integer
+https://leetcode.com/problems/reverse-integer/
+
+
+
+
+
+
+// using 64-bit integer
 
 
 class Solution {                      
 public:
     int reverse(int x) {
-        long r=0;      // decleare r 
+        long r=0;      // declare r 
         while(x){
-         r=r*10+x%10; // find remainder and add its to r
+         r=r*10+x%10; // find the remainder and add it to r
          x=x/10;     // Update the value of x
         }
         if(r>INT_MAX || r<INT_MIN) return 0; // check range if r is outside the range then return 0  
-        return int(r);  // if r in the 32 bit range then return r
+        return int(r);  // if r in the 32-bit range then return r
     }
 }; 
 
 
 
-// using 32 bit integer
+// using 32-bit integer
 
 class Solution {                      
 public:
     int reverse(int x) {
         int r=0;      // decleare r 
         while(x){
-         if (r>INT_MAX/10 || r<INT_MIN/10) return 0; // check 32 bit range if r is outside the range then return 0 
-         r=r*10+x%10; // find remainder and add its to r
+         if (r>INT_MAX/10 || r<INT_MIN/10) return 0; // check 32-bit range if r is outside the range then return 0 
+         r=r*10+x%10; // find the remainder and add it to r
          x=x/10;     // Update the value of x
         } 
-        return r;  // if r in the 32 bit range then return r
+        return r;  // if r in the 32-bit range then return r
     }
 }; 
