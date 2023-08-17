@@ -1,5 +1,6 @@
 https://www.codingninjas.com/studio/problems/print-1-to-n_628290?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=0
 
+https://www.codingninjas.com/studio/problems/-print-n-times_8380707?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=0
 
 
 
@@ -31,6 +32,24 @@ vector<int> printNos(int x) {
     // Write Your Code Here
     vector<int> sol;
     ans(x, sol , x);
+    
+    return sol;
+}
+
+
+// to print a name n times with recursion
+
+
+void ans(int n , vector<string> &str , string i){
+    if ( n == 0) return;
+    str.push_back(i);
+    ans(--n, str, i);
+
+}
+vector<string> printNTimes(int n) {
+    // Write Your Code Here
+    vector<string> sol;
+    ans(n, sol , "Coding Ninjas");
     
     return sol;
 }
