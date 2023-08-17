@@ -1,0 +1,13 @@
+https://www.codingninjas.com/studio/problems/hcf-and-lcm_840448?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+
+
+
+
+int ans(int a,int b){
+    if(b == 0)
+    return a;
+    return ans(b,a%b);
+}
+int calcGCD(int n, int m){
+    return ans(min(n,m),max(n,m));
+}
