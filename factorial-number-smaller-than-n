@@ -1,0 +1,46 @@
+https://www.codingninjas.com/studio/problems/factorial-numbers-not-greater-than-n_8365435?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=1
+
+
+// method 1 - less time optimal 
+
+int factorial(int n){
+    if(n <= 0)
+    return 1;
+    
+    else
+    return n * factorial(n-1);
+}
+
+vector<long long> factorialNumbers(long long n) {
+    vector<long long> ans;
+    long long i = 1;
+    long long fact = 1;
+    while(i <= n){
+        long long fact = factorial(i);
+        if(fact <= n )
+        ans.push_back(fact);
+        else
+        break;
+        ++i;
+
+    }
+    return ans;
+}
+
+// method 2 with optimisation
+
+vector<long long> factorialNumbers(long long n) {
+    vector<long long> ans;
+    long long i = 1;
+    long long fact = 1;
+    while(i <= n){
+        fact = fact * i;
+        if(fact <= n )
+        ans.push_back(fact);
+        else
+        break;
+        ++i;
+
+    }
+    return ans;
+}
