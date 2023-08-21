@@ -1,0 +1,19 @@
+https://www.codingninjas.com/studio/problems/selection-sort_624469?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=0
+
+
+
+void selectionSort(vector<int>&arr) {
+    // Write your code here.
+    int n = arr.size() - 1;
+ 
+    for(int i=0;i<n;i++)
+{
+    for(int j=i+1;j<=n;j++)
+    {
+        if(arr[j] < arr[i])
+        {
+            swap(arr[i] , arr[j]);
+        }
+    }
+}
+}
