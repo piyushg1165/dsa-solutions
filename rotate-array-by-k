@@ -1,0 +1,31 @@
+https://leetcode.com/problems/rotate-array/
+
+
+
+// method 1
+void rotate(vector<int>& nums, int k) {
+        vector<int> temp(nums.size());
+        for(int i=0;i<nums.size();i++)
+        {
+            temp[(i+k)%nums.size()]=nums[i];
+        }
+        nums=temp;
+    }
+
+// method 2
+
+void rotate(vector<int>& nums, int k) 
+    {
+        int len=nums.size();
+        k%=len;
+        if(k==0)
+            return;
+		// reversing first size-k element
+        reverse(nums.begin(),nums.end()-k);
+		
+		// reversing last k element
+        reverse(nums.end()-k,nums.end());
+		
+		//reversing the whole array
+        reverse(nums.begin(),nums.end());
+    }
