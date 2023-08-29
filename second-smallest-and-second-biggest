@@ -1,0 +1,39 @@
+https://www.codingninjas.com/studio/problems/ninja-and-the-second-order-elements_6581960?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=0
+
+
+
+
+vector<int> getSecondOrderElements(int n, vector<int> a) {
+    // Write your code here.
+    int min = INT_MAX;
+    int max = INT_MIN;
+    int secmin = -1;
+    int secmax = -1;
+    for(int i=0; i<n ; i++)
+    {
+        if(a[i] < min)
+        {
+            secmin = min;
+            min = a[i];
+            
+        }
+        else if (a[i] < secmin && a[i] != min) 
+        {
+            secmin = a[i];
+        }
+    }
+    for(int i=0; i<n ; i++)
+    {
+        if(a[i] > max)
+        {
+            secmax = max;
+            max = a[i];
+        }
+        else if (a[i] > secmax && a[i] != max) 
+        {
+            secmax = a[i];
+        }
+        
+    }
+    return {secmax , secmin};
+}
