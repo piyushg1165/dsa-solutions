@@ -1,0 +1,28 @@
+
+
+// without precision
+
+int floorSqrt(int n)
+{
+    // Write your code here.
+    int s = 0;
+    int e = n;
+    int mid = s+(e-s)/2;
+    int ans;
+    while(s<=e)
+    {
+        if(mid == n/mid)
+        return mid;
+        if(mid < n/mid)
+        {
+            ans = mid;
+            s = mid+1;
+        }
+        else
+        {
+            e = mid-1;
+        }
+        mid = s+(e-s)/2;
+    }
+    return ans;
+}
