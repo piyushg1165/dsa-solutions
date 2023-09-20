@@ -1,5 +1,6 @@
 https://www.codingninjas.com/studio/problems/allocate-books_1090540?utm_source=youtube&utm_medium=affiliate&utm_campaign=codestudio_Striver_BinarySeries&leftPanelTab=0
 
+
 bool isPossible(vector<int>& arr, int n, int m, int mid){
     int students = 1;
     int pageSum = 0;
